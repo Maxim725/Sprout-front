@@ -1,0 +1,163 @@
+.compilation {
+	margin-top: 80px;
+
+	padding-left: calc(50% - 720px);
+	padding-right: calc(50% - 720px);
+
+	&__header {
+		display: flex;
+
+		margin-bottom: 44px;
+
+		user-select: none;
+
+		&-container {
+			display: flex;
+			justify-content: space-between;
+
+			padding-left: calc(50% - 585px);
+			padding-right: calc(50% - 585px);
+		}
+
+		&-icon {
+			margin-right: 24px;
+		}
+
+		&-heading {
+			font-weight: bold;
+			font-size: 40px;
+			line-height: 48px;
+		}
+
+		&-view {
+			display: flex;
+			height: 100%;
+
+			user-select: none;
+			cursor: pointer;
+			&-icon {
+				margin-left: 10px;
+			}
+
+			&:active {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	&__slider {
+		position: relative;
+
+		&-collection {
+			display: flex;
+			overflow: hidden;
+
+			contain: content;
+
+			padding-left: 160px;
+			margin-right: 0px;
+		}
+
+		&-item {
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+		}
+
+		&-arrow {
+			&-left {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: #fff;
+				position: absolute;
+
+				left: 50px;
+				top: 50%;
+
+				box-shadow: 0px 10px 20px -10px rgba(56, 54, 52, 0.08);
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				cursor: pointer;
+				z-index: 10;
+				& > svg {
+					transform: rotate(90deg);
+					width: 15px;
+					height: 15px;
+
+					user-select: none;
+				}
+
+				&:active {
+					background-color: #e45858;
+
+					& .compilation__path {
+						stroke: white;
+					}
+				}
+			}
+
+			&-right {
+				width: 50px;
+				height: 50px;
+
+				border-radius: 50%;
+				background-color: #fff;
+
+				position: absolute;
+				right: 50px;
+				top: 50%;
+
+				box-shadow: 0px 10px 20px -10px rgba(56, 54, 52, 0.08);
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				cursor: pointer;
+				z-index: 10;
+
+				& > svg {
+					transform: rotate(-90deg);
+					width: 15px;
+					height: 15px;
+
+					user-select: none;
+				}
+
+				&:active {
+					background-color: #e45858;
+
+					& .compilation__path {
+						stroke: white;
+					}
+				}
+			}
+		}
+
+		&-fade {
+			&-left {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				left: 0;
+				width: 100px;
+				z-index: 2;
+				background: linear-gradient(-90deg, rgba(252, 250, 249, 0), #f5f3f1);
+			}
+
+			&-right {
+				position: absolute;
+				top: 0;
+				height: 100%;
+				right: 0;
+				width: 100px;
+				z-index: 2;
+				background: linear-gradient(90deg, rgba(255, 255, 255, 0), #f5f3f1);
+			}
+		}
+	}
+}

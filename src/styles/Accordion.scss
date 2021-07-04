@@ -1,0 +1,50 @@
+.accordion__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	max-width: 480px;
+	margin: auto;
+
+	cursor: pointer;
+
+	user-select: none;
+}
+
+.accordion {
+	width: 100%;
+	max-width: 270px;
+	color: #383634;
+
+	padding-bottom: 32px;
+	padding-top: 32px;
+
+	border-bottom: 1px solid rgba(56, 54, 52, 0.08);
+
+	transition-property: padding-top, padding-bottom;
+	transition: 0.3s ease-in-out;
+
+	&__heading {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	&__content {
+		height: 0;
+		opacity: 0;
+
+		/* display: flex; */
+		overflow: hidden;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__details-icon {
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+.accordion__content.show {
+	height: 180px; /* Если оставляю проценты, то визуализация перехода идёт по другому */
+	opacity: 1;
+}

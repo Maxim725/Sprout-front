@@ -1,0 +1,39 @@
+.checkbox {
+	margin-right: 12px;
+
+	display: flex;
+	align-items: center;
+
+	& > input {
+		display: none;
+	}
+
+	&__form {
+		position: relative;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+
+		background: #ffffff;
+		border: 1px solid #edeae7;
+		box-shadow: 0px 4px 6px -5px rgba(56, 54, 52, 0.1);
+		border-radius: 5px;
+	}
+
+	&__checked {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 20px;
+		height: 20px;
+
+		background-color: #4c7c7d;
+		border-radius: 5px;
+	}
+}

@@ -1,0 +1,29 @@
+.breadcrumbs {
+	display: flex;
+
+	font-size: 14px;
+	line-height: 16px;
+
+	&__link {
+		margin-left: 5px;
+		color: rgba(56, 54, 52, 0.5);
+
+		&:active {
+			color: rgba(56, 54, 52, 1);
+		}
+	}
+
+	&__item {
+		color: rgba(56, 54, 52, 0.5);
+
+		&:not(:first-child) {
+			margin-left: 5px;
+
+			&:not(:first-child) {
+				&::before {
+					content: "/";
+				}
+			}
+		}
+	}
+}

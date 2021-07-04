@@ -1,0 +1,11 @@
+.homepage {
+	&__delimiter {
+		height: 1px;
+		display: flex;
+		justify-content: center;
+		background-color: #ccc;
+
+		margin: 80px 135px 0 135px;
+		opacity: 0.4;
+	}
+}
